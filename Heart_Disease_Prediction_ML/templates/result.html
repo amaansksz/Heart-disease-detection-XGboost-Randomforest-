@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .result-text {
+            flex: 1;
+        }
+        .heart-img {
+            max-width: 200px;
+            margin-left: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-text">
+            <h1>Prediction Results</h1>
+            <p>Prediction of Heart Disease: {{ result }}</p>
+            <p>Chosen Model: XGBoost + RandomForest (Voting Classifier)</p>
+            <p>Model Accuracy: {{ chosen_model_acc }}%</p>
+            <!-- You can remove the following section if not needed -->
+            <!-- <p>Logistic Regression Accuracy: {{ logistic_acc }}%</p>
+            <p>Decision Tree Accuracy: {{ decision_tree_acc }}%</p> -->
+            <a href="/">Go Back</a>
+        </div>
+        <img src="/static/cartoon_heart.png" alt="Cartoon Heart" class="heart-img">
+    </div>
+</body>
+</html>

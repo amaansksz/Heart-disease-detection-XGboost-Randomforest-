@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Heart Disease Predictor</h1>
+        <img src="/static/cartoon_heart.png" alt="Cartoon Heart" class="heart-img">
+        <form action="/predict" method="POST" class="form">
+            <label>Age:</label>
+            <input type="number" name="age" required><br>
+
+            <label>Sex (0 = Female, 1 = Male):</label>
+            <input type="number" name="sex" required><br>
+
+            <label>Chest Pain Type (0-3):</label>
+            <input type="number" name="cp" required><br>
+
+            <label>Resting Blood Pressure:</label>
+            <input type="number" name="trestbps" required><br>
+
+            <label>Cholesterol:</label>
+            <input type="number" name="chol" required><br>
+
+            <label>Fasting Blood Sugar (1 = > 120 mg/dl, 0 = otherwise):</label>
+            <input type="number" name="fbs" required><br>
+
+            <label>Resting ECG Results (0-2):</label>
+            <input type="number" name="restecg" required><br>
+
+            <label>Max Heart Rate Achieved:</label>
+            <input type="number" name="thalach" required><br>
+
+            <label>Exercise Induced Angina (0 = No, 1 = Yes):</label>
+            <input type="number" name="exang" required><br>
+
+            <label>ST Depression (oldpeak):</label>
+            <input type="number" name="oldpeak" step="0.1" required><br>
+
+            <label>Slope of Peak Exercise ST Segment (0-2):</label>
+            <input type="number" name="slope" required><br>
+
+            <label>Number of Major Vessels (0-3):</label>
+            <input type="number" name="ca" required><br>
+
+            <label>Thalassemia (1 = normal; 3 = fixed defect; 6 = reversible defect):</label>
+            <input type="number" name="thal" required><br>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
